@@ -1,101 +1,66 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./style.css">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Glowing Meteor</title>
+  <link rel="stylesheet" href="./style.css">
 
-    <!-- Importar Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Bangers&family=Courgette&family=Dela+Gothic+One&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=Kalam:wght@300;400;700&family=Luckiest+Guy&family=Mr+Dafoe&family=Oswald&family=Passion+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="first">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<div class="second">
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<div class="third">
+	<ul>
+		<li></li>
+		<li></li>
+		<li class="floating-1"></li>
+		<li class="floating-1"></li>
+		<li class="floating-2"></li>
+		<li class="floating-2"></li>
+	</ul>
+</div>
+<div class="fourth">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li class="floating"></li>
+		<li class="floating"></li>
+		<li class="floating"></li>
+		<li class="floating"></li>
+	</ul>
+	<span class="smile"></span>
+	<span class="eyes"></span>
+	<span class="cheeks"></span>
+</div>
 
-    <title>Bruno Mauricio Nyland - Programador FullStack</title>
-  </head>
-
-  <body class="reveal-once">
-    <nav class="navbar navbar-scrolled">
-      <ul class="nav-ul">
-        <li class="nav-li">
-          <a class="nav-title effect-color" href="#">BRUNO NYLAND</a>
-        </li>
-      </ul>
-      <ul class="nav-ul">
-        <li class="nav-li">
-          <a class="nav-a effect-color" href="#">Sobre mim</a>
-        </li>
-        <li class="nav-li">
-            <a class="nav-a effect-color" href="#">Serviços</a>
-        </li>
-        <li class="nav-li">
-          <a class="nav-a effect-color" href="#">Portfólio</a>
-        </li>
-        <li class="nav-li">
-          <a class="nav-a effect-color" href="#">Fale comigo</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="navbar-back"></div>
-
-    <div class="section-1">
-      <div id="presentation" class="m20vw reveal">
-        <p>
-          Olá, meu nome é Bruno, seja bem-vindo ao meu currículo virtual.
-        </p>
-        <p>
-          Iniciei minha jornada na programação em 2009, quando comecei o curso de
-          Sistemas de Informação na UFGD (Universidade da Grande Dourados - MS), 
-          onde tive os primeiros contatos com algoritmos e lógica de programação.
-        </p>
-        <p>
-          Infelizmente após 2 anos de curso parei a faculdade pois comecei a trabalhar
-          em outra cidade, o que acabou impossibilitando que eu continuasse os estudos.
-        </p>
-      </div>
-    </div>
-
-    <div class="section-2" class="reveal">
-      <div id="tecnology">
-        <h3>Tecnologias</h3>
-        <div class="center">
-          <ul class="tec-list">
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/python_logo.png'%}">&nbsp;&nbsp;Python</li>
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/django_logo.png'%}">&nbsp;&nbsp;Django</li>
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/banco_logo.png'%}">&nbsp;&nbsp;Banco de dados</li>
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/html_logo.png'%}">&nbsp;&nbsp;HTML</li>
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/css_logo.png'%}">&nbsp;&nbsp;CSS</li>
-            <li class="tec-item"><img width="30" src="{% static 'img/tec/js_logo.png'%}">&nbsp;&nbsp;Javascript</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-2" class="reveal">
-
-    </div>
-
-    <div class="section-2" class="reveal">
-
-    </div>
-
-    <!-- Javascript -->
-    <script src="./style.js' %}"></script>
-    <script>
-      ScrollReveal().reveal('.reveal', {
-        reset: true,
-        interval: 80,
-        distance: '50px',
-        duration: 200,
-      })
-
-      ScrollReveal().reveal('.reveal-once', {
-        delay: 0,
-        distance: '50px',
-        duration: 1000,
-        origin: 'top',
-        interval: 80,
-      })
-    </script>
-  </body>
+<div class=random-stars-container>
+	<span class="random-stars"></span>
+	<span class="random-stars"></span>
+	<span class="random-stars"></span>
+	<span class="random-stars"></span>
+</div>
+<!-- partial -->
+<script src='https://code.createjs.com/createjs-2015.11.26.min.js'></script>
+<script src='https://code.createjs.com/easeljs-0.8.2.min.js'></script>
+<script src='https://code.createjs.com/tweenjs-0.6.2.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</body>
 </html>
