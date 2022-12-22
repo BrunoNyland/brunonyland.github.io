@@ -1,0 +1,221 @@
+.browser-window {
+    width: calc(100% - 100px);
+    max-width: 960px;
+    position: relative
+}
+
+.browser-window__bar {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-line);
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0
+}
+
+.browser-window__bar .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background: var(--color-line);
+    margin-left: 8px
+}
+
+.browser-window__bar .dot:first-child {
+    margin-left: 12px
+}
+
+.browser-window__content {
+    border: 1px solid var(--color-line);
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    -o-border-image: linear-gradient(to bottom, var(--color-line) 0%, var(--color-line) 50%, var(--color-bg) 100%);
+    border-image: linear-gradient(to bottom, var(--color-line) 0%, var(--color-line) 50%, var(--color-bg) 100%);
+    border-image-slice: 1
+}
+
+.browser-window__content-right {
+    display: flex
+}
+
+.browser-window__content-right .browser-window__link {
+    margin-left: 10px
+}
+
+.browser-window__link {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    align-items: center
+}
+
+.browser-window__link .hamburger {
+    display: block;
+    width: 26px;
+    height: 18px;
+    position: relative
+}
+
+.browser-window__link .hamburger span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    z-index: 0
+}
+
+.browser-window__link .hamburger span:nth-child(1) {
+    top: 0px
+}
+
+.browser-window__link .hamburger span:nth-child(2) {
+    top: 8px
+}
+
+.browser-window__link .hamburger span:nth-child(3) {
+    top: 16px
+}
+
+.browser-window__link .hamburger span:before,
+.browser-window__link .hamburger span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 0;
+    right: 0;
+    left: auto
+}
+
+.browser-window__link .hamburger span:before {
+    z-index: 1;
+    background: var(--color-link);
+    transition: all .15s linear 0s
+}
+
+.browser-window__link .hamburger span:after {
+    z-index: 2;
+    background: var(--color-bg);
+    transition: all .15s linear .3s
+}
+
+.browser-window__link .hamburger span:nth-child(2):before {
+    transition-delay: .15s
+}
+
+.browser-window__link .hamburger span:nth-child(3):before {
+    transition-delay: .3s
+}
+
+.browser-window__link .hamburger span:nth-child(2):after {
+    transition-delay: .45s
+}
+
+.browser-window__link .hamburger span:nth-child(3):after {
+    transition-delay: .6s
+}
+
+.browser-window__link .settings-icon {
+    width: 34px;
+    height: 34px
+}
+
+.browser-window__link .settings-icon__line {
+    stroke: var(--color-text);
+    stroke-width: 5px;
+    transition: all .2s ease .05s
+}
+
+.browser-window__link .settings-icon__rect {
+    stroke: var(--color-text);
+    fill: var(--color-bg);
+    stroke-width: 5px;
+    transition: all .2s ease .05s
+}
+
+.browser-window__link svg {
+    width: 30px;
+    height: 30px
+}
+
+.browser-window__link svg path {
+    fill: var(--color-text);
+    transition: all .2s ease 0s
+}
+
+.browser-window__link .magnifyer {
+    transition: all .2s ease
+}
+
+.browser-window__link:hover svg path {
+    fill: var(--color-link);
+    transition: all .2s ease .05s
+}
+
+.browser-window__link:hover .hamburger span:after,
+.browser-window__link:hover .hamburger span:before {
+    width: 100%;
+    left: 0;
+    right: auto
+}
+
+.browser-window__link:hover .hamburger span:after {
+    z-index: 1;
+    transition: all .15s linear 0s
+}
+
+.browser-window__link:hover .hamburger span:before {
+    z-index: 2;
+    transition: all .15s linear .3s
+}
+
+.browser-window__link:hover .hamburger span:nth-child(2):after {
+    transition-delay: .15s
+}
+
+.browser-window__link:hover .hamburger span:nth-child(3):after {
+    transition-delay: .3s
+}
+
+.browser-window__link:hover .hamburger span:nth-child(2):before {
+    transition-delay: .45s
+}
+
+.browser-window__link:hover .hamburger span:nth-child(3):before {
+    transition-delay: .6s
+}
+
+.browser-window__link:hover .settings-icon__line,
+.browser-window__link:hover .settings-icon__rect {
+    stroke: var(--color-link);
+    transition: all .2s ease .05s
+}
+
+.browser-window__link:hover .settings-icon__group--1 .settings-icon__rect {
+    transform: translateY(20px)
+}
+
+.browser-window__link:hover .settings-icon__group--2 .settings-icon__rect {
+    transform: translateY(-20px)
+}
+
+.browser-window__link:hover .settings-icon__group--3 .settings-icon__rect {
+    transform: translateY(25px)
+}
+
+.browser-window__link:hover .avatar__head {
+    transform: translateY(-3px)
+}
+
+.browser-window__link:hover .magnifyer {
+    transform: rotate(88deg);
+    transform-origin: 45% 43%
+}
